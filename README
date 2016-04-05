@@ -1,0 +1,43 @@
+	A:
+	
+	compile: make lab3
+
+	B:
+	
+	size = 1000
+	output:
+	sort(): 0 seconds
+	1/v2 are different.
+	insertion_sort(): 0.02 seconds
+	v1/v2 are the same.
+
+	size = 10000
+	output:
+	sort(): 0 seconds   
+	v1/v2 are different.
+	insertion_sort(): 1.29 seconds
+	v1/v2 are the same.
+
+	size = 100000
+	output:
+	sort(): 0.04 seconds
+	v1/v2 are different.
+	insertion_sort(): 128.21 seconds
+	v1/v2 are the same.
+
+	size = 1000000
+	output:
+	sort(): 0.55 seconds
+	v1/v2 are different.
+	insertion_sort(): 12816.3 seconds
+	v1/v2 are the same.
+	
+	Explanation:
+	
+	sort()：從左到右，相鄰的兩兩比較，較大者往右移動，直到整個大小順序由小至大。
+		一旦排序好，便結束。當資料非常亂時，這麼做效益不彰。
+	
+	insertion_sort()：從左到右，把數字插入到目前已排序的陣列當中。插入時要挪動整塊記憶體，需將大量數字往右挪‧
+	
+	O(n^2): 演算法則執行時間會成二次方的成長，這種會變得不切實際，特別是當資料集合的大小變得很大時。
+	O(nlogn): 介於線性及二次方成長的中間之行為模式。
